@@ -10,7 +10,7 @@ public class ReverseInteger {
         x = Math.abs(x);
         int rev = 0;
         while (x > 0) {
-            if ((long) (rev) * 10 + x % 10 > Integer.MAX_VALUE) return 0;
+            if ((long) rev * 10 > Integer.MAX_VALUE) return 0;
             rev = rev * 10 + x % 10;
             x /= 10;
         }
