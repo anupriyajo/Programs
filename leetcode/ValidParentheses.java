@@ -3,10 +3,10 @@ package leetcode;
 import java.util.Stack;
 
 public class ValidParentheses {
-    public  static void main(String args) {
-        System.out.println("{[]}");
+    public static void main(String[] args) {
+        System.out.println(isValid("{[]}"));
     }
-    public boolean isValid(String s) {
+    public static boolean isValid(String s) {
         Stack<Character> stack = new Stack();
         for (char ch : s.toCharArray()) {
             if (ch == ')' && !stack.empty() && stack.peek() == '(') {
